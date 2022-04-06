@@ -14,5 +14,4 @@ while True:
    commands.append(command)
    if command == "exit":
       break
-
-conn.root.exposed_clock_sync(input_text, commands)
+   conn.root.exposed_clock_sync(input_text, commands)
