@@ -27,6 +27,8 @@ while True:
          print('The time should greater than 5')
       else:
          conn.root.update_pt(int(cmd_lst[1]))
+   else:
+      print('Unknown command')
 
    if command == "exit":
       break
