@@ -1,0 +1,146 @@
+##fileformat=VCFv4.1
+##FILTER=<ID=PASS,Description="All filters passed">
+##fileDate=20150218
+##reference=ftp://ftp.1000genomes.ebi.ac.uk//vol1/ftp/technical/reference/phase2_reference_assembly_sequence/hs37d5.fa.gz
+##source=1000GenomesPhase3Pipeline
+##contig=<ID=1,assembly=b37,length=249250621>
+##contig=<ID=2,assembly=b37,length=243199373>
+##contig=<ID=3,assembly=b37,length=198022430>
+##contig=<ID=4,assembly=b37,length=191154276>
+##contig=<ID=5,assembly=b37,length=180915260>
+##contig=<ID=6,assembly=b37,length=171115067>
+##contig=<ID=7,assembly=b37,length=159138663>
+##contig=<ID=8,assembly=b37,length=146364022>
+##contig=<ID=9,assembly=b37,length=141213431>
+##contig=<ID=10,assembly=b37,length=135534747>
+##contig=<ID=11,assembly=b37,length=135006516>
+##contig=<ID=12,assembly=b37,length=133851895>
+##contig=<ID=13,assembly=b37,length=115169878>
+##contig=<ID=14,assembly=b37,length=107349540>
+##contig=<ID=15,assembly=b37,length=102531392>
+##contig=<ID=16,assembly=b37,length=90354753>
+##contig=<ID=17,assembly=b37,length=81195210>
+##contig=<ID=18,assembly=b37,length=78077248>
+##contig=<ID=19,assembly=b37,length=59128983>
+##contig=<ID=20,assembly=b37,length=63025520>
+##contig=<ID=21,assembly=b37,length=48129895>
+##contig=<ID=22,assembly=b37,length=51304566>
+##contig=<ID=GL000191.1,assembly=b37,length=106433>
+##contig=<ID=GL000192.1,assembly=b37,length=547496>
+##contig=<ID=GL000193.1,assembly=b37,length=189789>
+##contig=<ID=GL000194.1,assembly=b37,length=191469>
+##contig=<ID=GL000195.1,assembly=b37,length=182896>
+##contig=<ID=GL000196.1,assembly=b37,length=38914>
+##contig=<ID=GL000197.1,assembly=b37,length=37175>
+##contig=<ID=GL000198.1,assembly=b37,length=90085>
+##contig=<ID=GL000199.1,assembly=b37,length=169874>
+##contig=<ID=GL000200.1,assembly=b37,length=187035>
+##contig=<ID=GL000201.1,assembly=b37,length=36148>
+##contig=<ID=GL000202.1,assembly=b37,length=40103>
+##contig=<ID=GL000203.1,assembly=b37,length=37498>
+##contig=<ID=GL000204.1,assembly=b37,length=81310>
+##contig=<ID=GL000205.1,assembly=b37,length=174588>
+##contig=<ID=GL000206.1,assembly=b37,length=41001>
+##contig=<ID=GL000207.1,assembly=b37,length=4262>
+##contig=<ID=GL000208.1,assembly=b37,length=92689>
+##contig=<ID=GL000209.1,assembly=b37,length=159169>
+##contig=<ID=GL000210.1,assembly=b37,length=27682>
+##contig=<ID=GL000211.1,assembly=b37,length=166566>
+##contig=<ID=GL000212.1,assembly=b37,length=186858>
+##contig=<ID=GL000213.1,assembly=b37,length=164239>
+##contig=<ID=GL000214.1,assembly=b37,length=137718>
+##contig=<ID=GL000215.1,assembly=b37,length=172545>
+##contig=<ID=GL000216.1,assembly=b37,length=172294>
+##contig=<ID=GL000217.1,assembly=b37,length=172149>
+##contig=<ID=GL000218.1,assembly=b37,length=161147>
+##contig=<ID=GL000219.1,assembly=b37,length=179198>
+##contig=<ID=GL000220.1,assembly=b37,length=161802>
+##contig=<ID=GL000221.1,assembly=b37,length=155397>
+##contig=<ID=GL000222.1,assembly=b37,length=186861>
+##contig=<ID=GL000223.1,assembly=b37,length=180455>
+##contig=<ID=GL000224.1,assembly=b37,length=179693>
+##contig=<ID=GL000225.1,assembly=b37,length=211173>
+##contig=<ID=GL000226.1,assembly=b37,length=15008>
+##contig=<ID=GL000227.1,assembly=b37,length=128374>
+##contig=<ID=GL000228.1,assembly=b37,length=129120>
+##contig=<ID=GL000229.1,assembly=b37,length=19913>
+##contig=<ID=GL000230.1,assembly=b37,length=43691>
+##contig=<ID=GL000231.1,assembly=b37,length=27386>
+##contig=<ID=GL000232.1,assembly=b37,length=40652>
+##contig=<ID=GL000233.1,assembly=b37,length=45941>
+##contig=<ID=GL000234.1,assembly=b37,length=40531>
+##contig=<ID=GL000235.1,assembly=b37,length=34474>
+##contig=<ID=GL000236.1,assembly=b37,length=41934>
+##contig=<ID=GL000237.1,assembly=b37,length=45867>
+##contig=<ID=GL000238.1,assembly=b37,length=39939>
+##contig=<ID=GL000239.1,assembly=b37,length=33824>
+##contig=<ID=GL000240.1,assembly=b37,length=41933>
+##contig=<ID=GL000241.1,assembly=b37,length=42152>
+##contig=<ID=GL000242.1,assembly=b37,length=43523>
+##contig=<ID=GL000243.1,assembly=b37,length=43341>
+##contig=<ID=GL000244.1,assembly=b37,length=39929>
+##contig=<ID=GL000245.1,assembly=b37,length=36651>
+##contig=<ID=GL000246.1,assembly=b37,length=38154>
+##contig=<ID=GL000247.1,assembly=b37,length=36422>
+##contig=<ID=GL000248.1,assembly=b37,length=39786>
+##contig=<ID=GL000249.1,assembly=b37,length=38502>
+##contig=<ID=MT,assembly=b37,length=16569>
+##contig=<ID=NC_007605,assembly=b37,length=171823>
+##contig=<ID=X,assembly=b37,length=155270560>
+##contig=<ID=Y,assembly=b37,length=59373566>
+##contig=<ID=hs37d5,assembly=b37,length=35477943>
+##FORMAT=<ID=GT,Number=1,Type=String,Description="Genotype">
+##INFO=<ID=CIEND,Number=2,Type=Integer,Description="Confidence interval around END for imprecise variants">
+##INFO=<ID=CIPOS,Number=2,Type=Integer,Description="Confidence interval around POS for imprecise variants">
+##INFO=<ID=CS,Number=1,Type=String,Description="Source call set.">
+##INFO=<ID=END,Number=1,Type=Integer,Description="End coordinate of this variant">
+##INFO=<ID=IMPRECISE,Number=0,Type=Flag,Description="Imprecise structural variation">
+##INFO=<ID=MC,Number=.,Type=String,Description="Merged calls.">
+##INFO=<ID=MEINFO,Number=4,Type=String,Description="Mobile element info of the form NAME,START,END<POLARITY; If there is only 5' OR 3' support for this call, will be NULL NULL for START and END">
+##INFO=<ID=MEND,Number=1,Type=Integer,Description="Mitochondrial end coordinate of inserted sequence">
+##INFO=<ID=MLEN,Number=1,Type=Integer,Description="Estimated length of mitochondrial insert">
+##INFO=<ID=MSTART,Number=1,Type=Integer,Description="Mitochondrial start coordinate of inserted sequence">
+##INFO=<ID=SVLEN,Number=.,Type=Integer,Description="SV length. It is only calculated for structural variation MEIs. For other types of SVs; one may calculate the SV length by INFO:END-START+1, or by finding the difference between lengthes of REF and ALT alleles">
+##INFO=<ID=SVTYPE,Number=1,Type=String,Description="Type of structural variant">
+##INFO=<ID=TSD,Number=1,Type=String,Description="Precise Target Site Duplication for bases, if unknown, value will be NULL">
+##INFO=<ID=AC,Number=A,Type=Integer,Description="Total number of alternate alleles in called genotypes">
+##INFO=<ID=AF,Number=A,Type=Float,Description="Estimated allele frequency in the range (0,1)">
+##INFO=<ID=NS,Number=1,Type=Integer,Description="Number of samples with data">
+##INFO=<ID=AN,Number=1,Type=Integer,Description="Total number of alleles in called genotypes">
+##INFO=<ID=EAS_AF,Number=A,Type=Float,Description="Allele frequency in the EAS populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=EUR_AF,Number=A,Type=Float,Description="Allele frequency in the EUR populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=AFR_AF,Number=A,Type=Float,Description="Allele frequency in the AFR populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=AMR_AF,Number=A,Type=Float,Description="Allele frequency in the AMR populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=SAS_AF,Number=A,Type=Float,Description="Allele frequency in the SAS populations calculated from AC and AN, in the range (0,1)">
+##INFO=<ID=DP,Number=1,Type=Integer,Description="Total read depth; only low coverage data were counted towards the DP, exome data were not used">
+##INFO=<ID=AA,Number=1,Type=String,Description="Ancestral Allele. Format: AA|REF|ALT|IndelType. AA: Ancestral allele, REF:Reference Allele, ALT:Alternate Allele, IndelType:Type of Indel (REF, ALT and IndelType are only defined for indels)">
+##INFO=<ID=VT,Number=.,Type=String,Description="indicates what type of variant the line represents">
+##INFO=<ID=EX_TARGET,Number=0,Type=Flag,Description="indicates whether a variant is within the exon pull down target boundaries">
+##INFO=<ID=MULTI_ALLELIC,Number=0,Type=Flag,Description="indicates whether a site is multi-allelic">
+##INFO=<ID=STRAND_FLIP,Number=0,Type=Flag,Description="Indicates that the reference strand has changed between GRCh37 and GRCh38">
+##INFO=<ID=REF_SWITCH,Number=0,Type=Flag,Description="Indicates that the reference allele has changed">
+##INFO=<ID=DEPRECATED_RSID,Number=.,Type=String,Description="dbsnp rs IDs that have been merged into other rs IDs or do not map to GRCh38">
+##INFO=<ID=RSID_REMOVED,Number=.,Type=String,Description="dbsnp rs IDs removed from this variant, due to either the variant splitting up or being deprecated/merged">
+##INFO=<ID=GRCH37_38_REF_STRING_MATCH,Number=0,Type=Flag,Description="Indicates reference allele in origin GRCh37 vcf string-matches reference allele in dbsnp GRCh38 vcf">
+##INFO=<ID=NOT_ALL_RSIDS_STRAND_CHANGE_OR_REF_SWITCH,Number=0,Type=Flag,Description="Indicates only some of the rs IDs in origin GRCh37 vcf switched strands or switched strands and changed reference allele. This would result in rs IDs being split into multiple lines">
+##INFO=<ID=GRCH37_POS,Number=1,Type=Integer,Description="Position in origin GRCh37 vcf">
+##INFO=<ID=GRCH37_REF,Number=1,Type=String,Description="Representation of reference allele in origin GRCh37 vcf">
+##INFO=<ID=ALLELE_TRANSFORM,Number=0,Type=Flag,Description="Indicates that at least some of the alleles have changed in how they're represented, e.g. through left shifting.">
+##INFO=<ID=REF_NEW_ALLELE,Number=0,Type=Flag,Description="Indicates that the reference allele is an allele not present in the origin GRCh37 vcf">
+##INFO=<ID=CHROM_CHANGE_BETWEEN_ASSEMBLIES,Number=.,Type=String,Description="dbsnp rs IDs that are mapped to a different chromosome between GRCh37 and GRCh38">
+##bcftools_viewVersion=1.9+htslib-1.9
+##bcftools_viewCommand=view -S ../../metadata/GEUVADIS/GEUVADIS_genotype_list.txt --force-samples /gpfs/hpchome/a72094/rocket/datasets/1000G/GRCh38/ALL.chr1_GRCh38.genotypes.20170504.vcf.gz; Date=Thu Oct  4 22:50:45 2018
+##bcftools_filterVersion=1.9+htslib-1.9
+##bcftools_filterCommand=filter -i 'MAF[0] >= 0.01' -Oz -o /gpfs/hpchome/a72094/rocket/projects/GEUVADIS/genotypes/GEUVADIS_445_samples.chr1.vcf.gz; Date=Thu Oct  4 22:50:45 2018
+##INFO=<ID=OLD_VARIANT,Number=.,Type=String,Description="Original before vt normalize was run. FORMAT chr:pos:ref:alt">
+##bcftools_concatVersion=1.9+htslib-1.9
+##bcftools_concatCommand=concat -O z -o GEUVADIS_445_samples.merged.vcf.gz GEUVADIS_445_samples.chr1.vcf.gz GEUVADIS_445_samples.chr2.vcf.gz GEUVADIS_445_samples.chr10.vcf.gz GEUVADIS_445_samples.chr11.vcf.gz GEUVADIS_445_samples.chr12.vcf.gz GEUVADIS_445_samples.chr13.vcf.gz GEUVADIS_445_samples.chr14.vcf.gz GEUVADIS_445_samples.chr15.vcf.gz GEUVADIS_445_samples.chr16.vcf.gz GEUVADIS_445_samples.chr17.vcf.gz GEUVADIS_445_samples.chr18.vcf.gz GEUVADIS_445_samples.chr19.vcf.gz GEUVADIS_445_samples.chr20.vcf.gz GEUVADIS_445_samples.chr21.vcf.gz GEUVADIS_445_samples.chr22.vcf.gz GEUVADIS_445_samples.chr3.vcf.gz GEUVADIS_445_samples.chr4.vcf.gz GEUVADIS_445_samples.chr5.vcf.gz GEUVADIS_445_samples.chr6.vcf.gz GEUVADIS_445_samples.chr7.vcf.gz GEUVADIS_445_samples.chr8.vcf.gz GEUVADIS_445_samples.chr9.vcf.gz GEUVADIS_445_samples.chrX.vcf.gz; Date=Fri Oct  5 21:57:17 2018
+##bcftools_normVersion=1.9+htslib-1.9
+##bcftools_normCommand=norm -m-any GEUVADIS_445_samples.merged.vcf.gz; Date=Fri Oct  5 22:55:21 2018
+##bcftools_annotateVersion=1.9+htslib-1.9
+##bcftools_annotateCommand=annotate --set-id chr%CHROM\_%POS\_%REF\_%FIRST_ALT -Oz -o GEUVADIS_GRCh38_filtered.vcf.gz; Date=Fri Oct  5 22:55:21 2018
+##bcftools_viewCommand=view -r 2 -Oz -o GEUVADIS_GRCh38_filtered_chr2.vcf.gz GEUVADIS_GRCh38_filtered.vcf.gz; Date=Sat Mar  9 17:41:57 2019
+##bcftools_viewVersion=1.10.2+htslib-1.10.2
+##bcftools_viewCommand=view -r 2:135851076 /gpfs/space/projects/MTAT.03.239_Bioinformatics/data/GEUVADIS/GEUVADIS_GRCh38_filtered_chr2.vcf.gz; Date=Fri Mar 18 12:38:17 2022
+#CHROM	POS	ID	REF	ALT	QUAL	FILTER	INFO	FORMAT	NA20508	NA12812	HG00315	NA12749	NA20510	NA07056	HG00155	HG00355	NA19119	HG00350	NA12275	HG00336	HG00273	HG00123	HG00236	NA19236	HG00345	NA12144	HG00096	HG00157	NA19204	HG00384	NA18498	HG00321	HG00320	NA06994	NA12489	NA11931	NA20518	NA12830	NA20541	HG00242	NA20752	NA19171	HG00331	HG00262	NA12005	HG00125	NA18517	NA12761	NA11992	NA20509	NA19144	HG00149	NA19118	NA11831	NA20759	NA19096	HG00263	HG00114	NA19137	HG00145	NA19257	HG00349	NA12006	NA11893	HG00372	NA20778	HG00250	NA12814	HG00110	HG00285	NA18520	NA11892	HG00121	NA20504	HG00358	HG00186	HG00256	NA12546	NA20806	HG00137	NA18933	NA18511	HG00337	NA12843	NA12762	NA10847	HG00383	NA19184	NA19146	NA20768	NA12342	NA20754	NA19121	NA20760	HG00255	HG00239	HG00324	NA20534	HG00382	HG00151	HG00268	HG00181	HG00119	NA19256	HG00311	NA11894	HG00313	HG00351	NA20826	NA20766	HG00334	NA19092	NA19197	HG00261	NA19213	NA20797	NA12827	HG00103	NA20812	NA20539	NA18917	NA12716	HG00343	NA12287	HG00139	NA20519	HG00180	NA20804	NA12282	HG00182	HG00366	NA18489	NA12751	NA20765	HG00251	NA20790	HG00335	NA12872	NA18502	HG00245	NA20513	NA11918	NA18508	HG00174	HG00159	NA18510	HG00108	HG00106	HG00346	HG00338	NA19131	NA20783	NA12154	NA20785	NA19198	NA07357	NA12234	NA19114	NA20774	HG00177	NA12413	NA18912	NA19185	NA19147	HG00260	HG00115	HG00176	NA19099	HG00133	HG00171	NA20770	NA20786	NA19141	HG00284	NA20792	NA12717	HG00341	HG00373	NA20585	NA18519	NA20588	NA06989	NA20542	NA20524	HG00310	HG00100	NA19222	NA20538	NA19214	NA19175	HG00231	NA06986	NA18486	HG00361	NA12873	NA11832	HG00325	HG00117	NA12400	NA19113	HG00265	NA18908	NA20528	NA19152	NA20532	NA12874	NA12829	NA12044	HG00278	HG00097	NA19160	NA19116	NA11930	HG00118	HG00234	HG00269	NA20520	HG00306	HG00356	HG00258	NA19098	NA12718	HG00128	NA11840	HG00178	NA20802	HG00272	NA20756	NA20544	NA20808	NA20506	HG00323	NA12777	HG00143	NA20530	NA20582	HG00369	NA19108	NA12283	HG00281	HG00274	NA20814	HG00282	HG00266	NA19095	NA18916	HG00342	HG00246	NA11881	NA18505	HG00277	NA19201	NA20758	NA12340	NA18861	NA12776	HG00381	NA20801	NA20809	NA18907	NA19223	HG00122	NA20805	NA20507	HG00232	NA20811	NA12813	NA19189	HG00116	HG00332	NA20757	HG00330	NA20503	NA18867	HG00376	HG00319	NA11994	HG00183	HG00364	HG00179	NA20773	NA19138	HG00101	NA12760	HG00150	NA18488	HG00233	NA18873	HG00380	HG00120	NA20796	NA20527	HG00276	NA12249	HG00185	HG00339	NA19190	HG00257	NA07347	NA06984	HG00275	NA06985	HG00109	NA20505	HG00379	NA12155	HG00158	HG00238	NA20543	NA20798	NA12004	HG00127	NA12815	HG00353	HG00328	HG00111	NA20589	NA18868	NA20771	NA20525	NA11995	NA12842	NA12399	HG00253	NA18909	NA20586	NA12775	HG00267	NA20514	NA20517	HG00367	NA20787	HG00189	HG00371	NA19206	NA19248	NA19117	HG00264	NA19102	HG00105	NA20512	HG00240	NA11920	NA20807	NA18870	HG00360	NA18858	NA07037	NA12045	HG00259	HG00148	NA20502	NA20769	NA20536	HG00136	NA20795	HG00138	NA20521	HG00160	NA12341	NA10851	NA19235	HG01789	NA19210	NA20772	NA20813	HG00365	NA12383	HG00271	NA20535	NA20531	HG00188	HG00141	NA20581	HG00131	NA12750	NA20799	NA20828	HG01790	NA20810	NA18923	NA12156	HG00243	HG00129	NA12890	NA12043	NA12058	HG00102	HG00327	HG00326	NA20800	NA12763	NA19225	NA19172	NA19107	NA20819	HG00187	NA11843	NA19159	HG00099	NA12889	HG00132	NA12273	HG00309	NA11829	NA19209	NA11830	NA20540	NA20803	NA12272	HG00329	NA19200	NA12348	NA18910	HG00130	NA19129	HG00173	NA12347	NA18934	HG00244	NA18499	HG00235	NA19149	NA20515	NA20529	NA19207	HG00146	HG00280	NA20516	NA19143	NA19153	HG00126	HG00375	NA19247	HG00252	HG00112	HG00142	NA12286	HG00154	HG01334	HG02215	NA19130	HG00378	HG00344	NA07051	NA20815	NA19093	NA12778	HG01791	NA20761	HG00362	NA07048	HG00308
+2	135851076	chr2_135851076_G_A	G	A	100	PASS	AC=378;AF=0.161342;AN=890;NS=2504;DP=21221;EAS_AF=0;AMR_AF=0.2161;AFR_AF=0.0272;EUR_AF=0.508;SAS_AF=0.1135;AA=G|||;VT=SNP;GRCH37_POS=136608646;GRCH37_REF=G;GRCH37_38_REF_STRING_MATCH	GT	1|0	1|1	0|0	1|1	0|0	1|1	0|1	1|1	0|0	0|1	1|0	0|0	0|0	1|0	1|1	0|0	0|0	1|0	1|1	1|0	0|0	0|1	0|0	1|1	0|1	1|0	1|0	1|1	0|0	1|1	0|0	0|0	0|1	0|0	0|0	0|1	1|1	1|1	0|0	0|1	0|1	0|1	0|0	1|0	0|0	1|1	0|0	0|0	0|1	0|1	0|0	0|1	0|0	1|0	1|0	1|1	1|1	0|0	1|1	1|0	1|0	1|1	0|0	1|1	1|1	0|0	1|0	0|0	0|1	1|0	0|0	1|1	0|0	0|0	1|0	1|0	0|0	1|0	1|0	0|0	0|0	0|0	0|1	0|0	0|0	0|0	1|0	0|1	0|1	0|0	0|0	1|1	1|0	0|1	1|1	0|0	0|1	1|1	1|1	1|1	0|0	0|1	0|0	0|0	0|0	0|0	0|0	0|0	1|1	1|1	0|0	0|0	0|0	1|0	1|1	1|0	1|0	1|0	0|1	0|0	0|0	1|0	1|1	0|0	0|1	0|0	1|1	0|0	1|1	0|1	0|0	0|1	0|1	1|1	0|0	1|0	0|1	0|0	1|0	1|1	1|0	0|1	0|0	0|0	1|0	0|0	0|0	1|1	1|1	0|0	0|0	1|0	1|1	0|0	0|0	0|0	1|1	1|0	0|1	0|0	1|1	1|1	0|0	0|0	0|0	1|0	1|1	1|1	1|0	1|0	0|0	0|0	0|1	1|1	0|0	0|0	1|1	0|1	0|0	0|0	0|0	0|0	1|0	0|1	0|0	1|1	0|1	1|1	1|0	1|1	1|0	0|0	1|1	0|0	0|0	0|0	0|0	1|0	0|0	1|1	1|1	1|1	0|0	0|0	0|1	1|1	1|1	1|0	0|0	1|1	1|0	1|0	0|0	0|0	1|1	1|1	0|1	0|0	1|0	0|0	0|0	0|0	0|0	1|1	1|1	0|1	0|0	1|1	1|1	0|0	1|1	0|0	1|1	0|0	1|1	0|1	0|0	0|0	1|1	0|1	1|1	0|0	1|1	0|0	0|0	0|1	0|0	1|1	1|0	0|0	0|1	0|0	0|0	1|0	0|0	0|0	1|1	0|0	1|1	0|0	0|0	0|0	0|0	1|0	0|0	0|0	0|1	1|1	1|0	0|1	1|0	0|1	0|0	0|0	0|0	1|1	1|0	0|0	1|1	0|0	1|0	1|1	0|0	0|0	0|1	1|1	0|1	0|1	0|0	1|1	1|1	0|1	0|1	1|0	1|1	0|1	0|0	1|1	1|0	1|1	0|0	0|0	1|0	1|1	1|1	1|1	1|0	1|1	0|0	0|0	0|0	0|0	1|1	1|1	1|1	1|1	0|0	0|0	0|1	1|1	0|0	0|0	0|1	0|0	1|0	1|1	0|0	0|0	0|0	1|1	0|0	1|1	0|0	1|1	1|1	0|0	0|0	1|1	0|0	0|0	0|0	0|1	0|1	0|0	0|0	0|0	1|0	0|0	1|0	1|0	0|1	1|1	1|1	0|0	1|1	0|0	0|0	0|1	1|0	0|1	0|1	0|1	0|0	0|1	0|0	0|0	1|1	0|1	0|0	0|0	0|0	0|0	0|0	1|1	1|1	1|0	1|0	1|1	1|1	1|1	1|1	1|1	0|0	1|1	0|0	0|0	0|0	0|0	0|0	1|1	0|0	1|1	0|1	1|1	0|0	1|1	0|1	0|0	1|1	0|1	0|0	1|1	0|1	0|0	1|1	0|0	0|0	0|0	0|1	1|1	0|0	1|1	0|0	1|0	0|0	0|0	0|0	0|0	1|1	1|0	0|0	0|0	0|0	1|1	1|0	0|0	1|1	1|1	1|0	0|1	1|1	0|0	1|1	0|0	1|1	1|1	1|1	0|0	0|0	1|1	1|1	0|0	0|0	1|0	0|1

@@ -1,0 +1,119 @@
+---
+title: "assugnment5"
+output: pdf_document
+---
+
+# Task 1: Variance component analysis (2 point)
+
+```{r}
+library("lme4")
+library("dplyr")
+library("tidyr")
+library("ggplot2")
+library("MatrixEQTL")
+```
+
+```{r}
+# Calculate the proportion of variance explaned by different factors in a lme4 model
+varianceExplained <- function(lmer_model){
+  variance = as.data.frame(lme4::VarCorr(lmer_model))
+  var_percent = dplyr::mutate(variance, percent_variance = vcov/sum(vcov)) %>% 
+    dplyr::select(grp, percent_variance) %>% 
+    dplyr::mutate(type = "gene")
+  var_row = tidyr::spread(var_percent, grp, percent_variance)
+  return(var_row)  
+}
+```
+
+
+```{r}
+flow_processed = readRDS("results/processed_flow_cytometry_data.rds")
+line_medatada = readRDS("data/compiled_line_metadata.rds")
+```
+
+```{r}
+#Map flow cytometry channels to specifc proteins
+channel_marker_map = data_frame(channel = c("APC.A","PE.A","Pacific.Blue.A"), 
+                                protein_name = c("CD206","CD16","CD14"))
+```
+
+```{r}
+#Calculate intensity values
+unique_lines = dplyr::select(line_medatada, line_id, donor, genotype_id) %>% unique()
+flow_data = dplyr::left_join(flow_processed, channel_marker_map, by = "channel") %>%
+  dplyr::mutate(donor = ifelse(donor == "fpdj", "nibo",donor)) %>% #fpdj and nibo are the same donors
+  dplyr::left_join(unique_lines, by = "donor") %>%
+  dplyr::mutate(intensity = mean2-mean1) %>%
+  dplyr::select(line_id, genotype_id, donor, flow_date, protein_name, purity, intensity)
+
+#Construct a matrix of intensity values
+intensity_matrix = dplyr::select(flow_data, line_id, genotype_id, flow_date, protein_name, intensity) %>% 
+  tidyr::spread(protein_name, intensity) %>%
+  dplyr::mutate(sample_id = paste(line_id, as.character(flow_date), sep = "_"))
+```
+
+```{r}
+intensity_matrix
+```
+
+```{r}
+#Make a matrix of flow data and perform PCA
+flow_matrix = as.matrix(intensity_matrix[,c(4,5,6)])
+rownames(flow_matrix) = intensity_matrix$sample_id
+pca_res = prcomp(flow_matrix, scale = TRUE, center = TRUE)
+
+#Make a PCA plot
+pca_df = dplyr::mutate(as.data.frame(pca_res$x), sample_id = rownames(pca_res$x))
+ggplot(pca_df, aes(x = PC1, y = PC2, label = sample_id)) + geom_point() + geom_text()
+```
+
+
+```{r}
+#Choose outliers based on PCA and remove them
+outlier_samples = c("fafq_1_2015-10-16","iill_1_2015-10-20")
+flow_df_filtered = dplyr::filter(intensity_matrix, !(sample_id %in% outlier_samples)) %>%
+  dplyr::mutate(flow_date = as.factor(flow_date))
+```
+
+```{r}
+date_count = dplyr::group_by(flow_df_filtered, flow_date) %>% 
+  dplyr::summarise(n_samples = length(flow_date))
+ggplot(date_count, aes(x = n_samples)) + geom_histogram(binwidth = 1)
+```
+```{r}
+replicates_count = dplyr::group_by(flow_df_filtered, line_id) %>% 
+  dplyr::summarise(n_replicates = length(line_id))
+ggplot(replicates_count, aes(x = n_replicates)) + geom_histogram(binwidth = 1)
+```
+```{r}
+ggplot(flow_df_filtered, aes(x = as.factor(flow_date), y = CD206)) + 
+  geom_point() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  ylab("CD206 flourecent intensity") +
+  xlab("Measurement date")
+```
+
+```{r}
+ggplot(flow_df_filtered, aes(x = line_id, y = CD206)) + 
+  geom_point() + 
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  ylab("CD206 flourecent intensity") +
+  xlab("Name of the cell line")
+```
+```{r}
+# standard linear model to flow_date and line_id
+lm_model_date = lm(CD16 ~ flow_date, flow_df_filtered)
+summary(lm_model_date)$adj.r.squared
+
+lm_model_cell = lm(CD16 ~ line_id, flow_df_filtered)
+summary(lm_model_cell)$adj.r.squared
+```
+
+```{r}
+# standard linear model to flow_date and line_id
+lm_model_date = lm(CD206 ~ flow_date, flow_df_filtered)
+summary(lm_model_date)$adj.r.squared
+
+lm_model_cell = lm(CD206 ~ line_id, flow_df_filtered)
+summary(lm_model_cell)$adj.r.squared
+```

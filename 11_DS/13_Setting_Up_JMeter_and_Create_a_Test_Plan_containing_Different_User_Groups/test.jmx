@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.4.3">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Bubble Sort" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">a = [2,34,4,123,45,56,3,56,67,87,21,45,56,67,22,4234,4234,2342,1,34,546,67,677,343,4,41,32,456,1341,13,454,234,453,565,5,524,234,234,5456,567,673,245,567,78,78,324,56576,782,435,676,873,2,345,6767,7,3463,3,6767673,34534,2,345,656,3,5652,1,34345,3453545,35345356,66,7883345,676787,8988]
+b = a 
+long startTime = System.currentTimeMillis();
+for(out in (a.size()-2)..2)
+{
+	0.upto(out) { index -&gt;
+		if(a[index] &gt; a[index+1])
+		{
+			use(Collections) {
+				a.swap(index,index+1)
+			}
+		}
+	}
+}
+long endTime = System.currentTimeMillis();</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="InsertionSort" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">a = [2,34,4,123,45,56,3,56,67,87,21,45,56,67,22,4234,4234,2342,1,34,546,67,677,343,4,41,32,456,1341,13,454,234,453,565,5,524,234,234,5456,567,673,245,567,78,78,324,56576,782,435,676,873,2,345,6767,7,3463,3,6767673,34534,2,345,656,3,5652,1,34345,3453545,35345356,66,7883345,676787,8988]
+b = a 
+long startTime = System.currentTimeMillis();
+(1..(a.size()-2)).each { out -&gt;
+			def temp = a.getAt(out)
+			def index = out
+			while(index&gt;0 &amp;&amp; a.getAt(index-1) &gt;= temp)
+			{
+				value = a.getAt(index-1)
+				a.putAt(index,value)
+				--index
+			}
+			a.putAt(index,temp)
+}
+long endTime = System.currentTimeMillis();</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="TOH" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">5</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="true">
+          <stringProp name="scriptLanguage">java</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="script">/*
+ * @param int - number of disks
+ */
+static void solve ( int n ) {
+	// create the rods
+	IntStack rod_A = new IntStack(n);
+	IntStack rod_B = new IntStack(n);
+	IntStack rod_C = new IntStack(n);
+	// push the disks to the start rod
+	for ( int i = n; i &gt; 0; i-- ) {
+		rod_A.push(i);
+	}
+	// when there is only one disk
+	if ( n == 1 ) {
+		// move disk from rod A to C
+		rod_C.push(rod_A.pop());
+		System.out.println( &quot;  from A to C&quot; );
+		// we are done
+		return;
+	}
+	// smallest disk was moved
+	boolean small_disk_moved = false;
+	// location of smallest disk
+	IntStack small_disk_rod = null;
+	// last location of smallest disk
+	IntStack small_disk_last_rod = null;
+	// in case can be divided by 2
+	if ( n % 2 == 0 ) {
+		small_disk_rod = rod_B;
+		rod_B.push(rod_A.pop());
+		System.out.println( &quot;  from A to B&quot; );
+	} else {
+		small_disk_rod = rod_C;
+		rod_C.push(rod_A.pop());
+		System.out.println( &quot;  from A to C&quot; );
+	}
+	// info about smallest disk
+	small_disk_moved = true;
+	small_disk_last_rod = rod_A;
+	// start the solving loop
+	while ( true ) {
+		// if smallest has already moved
+		if ( small_disk_moved ) {
+			// move the next disk, only one legal move
+			if ( small_disk_rod == rod_A ) {
+				int disk1 = rod_B.pop();
+				int disk2 = rod_C.pop();
+				// move to the valid location
+				if ( disk1 == -1 &amp;&amp; disk2 == -1 ) {
+					// no more disks, we are done!
+					break;
+				} else if ( disk1 == -1 &amp;&amp; disk2 != -1 ) {
+					rod_B.push(disk2);
+					System.out.println( &quot;  from C to B&quot; );
+				} else if ( disk1 != -1 &amp;&amp; disk2 == -1 ) {
+					rod_C.push(disk1);
+					System.out.println( &quot;  from B to C&quot; );
+				} else if ( disk1 &gt; disk2 ) {
+					rod_B.push(disk1);
+					rod_B.push(disk2);
+					System.out.println( &quot;  from C to B&quot; );
+				} else {
+					rod_C.push(disk2);
+					rod_C.push(disk1);
+					System.out.println( &quot;  from B to C&quot; );
+				}
+			} else if ( small_disk_rod == rod_B ) {
+				int disk1 = rod_A.pop();
+				int disk2 = rod_C.pop();
+				// move to the valid location
+				if ( disk1 == -1 &amp;&amp; disk2 == -1 ) {
+					// no more disks, we are done!
+					break;
+				} else if ( disk1 == -1 &amp;&amp; disk2 != -1 ) {
+					rod_A.push(disk2);
+					System.out.println( &quot;  from C to A&quot; );
+				} else if ( disk1 != -1 &amp;&amp; disk2 == -1 ) {
+					rod_C.push(disk1);
+					System.out.println( &quot;  from A to C&quot; );
+				} else if ( disk1 &gt; disk2 ) {
+					rod_A.push(disk1);
+					rod_A.push(disk2);
+					System.out.println( &quot;  from C to A&quot; );
+				} else {
+					rod_C.push(disk2);
+					rod_C.push(disk1);
+					System.out.println( &quot;  from A to C&quot; );
+				}
+			} else {
+				int disk1 = rod_A.pop();
+				int disk2 = rod_B.pop();
+				// move to the valid location
+				if ( disk1 == -1 &amp;&amp; disk2 == -1 ) {
+					// no more disks, we are done!
+					break;
+				} else if ( disk1 == -1 &amp;&amp; disk2 != -1 ) {
+					rod_A.push(disk2);
+					System.out.println( &quot;  from B to A&quot; );
+				} else if ( disk1 != -1 &amp;&amp; disk2 == -1 ) {
+					rod_B.push(disk1);
+					System.out.println( &quot;  from A to B&quot; );
+				} else if ( disk1 &gt; disk2 ) {
+					rod_A.push(disk1);
+					rod_A.push(disk2);
+					System.out.println( &quot;  from B to A&quot; );
+				} else {
+					rod_B.push(disk2);
+					rod_B.push(disk1);
+					System.out.println( &quot;  from A to B&quot; );
+				}
+			}
+			small_disk_moved = false;
+		} else {
+			// move the smallest disk to the location it was not previously
+			if ( small_disk_rod == rod_A &amp;&amp; small_disk_last_rod == rod_B ) {
+				small_disk_rod = rod_C;
+				small_disk_last_rod = rod_A;
+				rod_C.push(rod_A.pop());
+				System.out.println( &quot;  from A to C&quot; );
+			} else if ( small_disk_rod == rod_A &amp;&amp; small_disk_last_rod == rod_C ) {
+				small_disk_rod = rod_B;
+				small_disk_last_rod = rod_A;
+				rod_B.push(rod_A.pop());
+				System.out.println( &quot;  from A to B&quot; );
+			} else if ( small_disk_rod == rod_B &amp;&amp; small_disk_last_rod == rod_A ) {
+				small_disk_rod = rod_C;
+				small_disk_last_rod = rod_B;
+				rod_C.push(rod_B.pop());
+				System.out.println( &quot;  from B to C&quot; );
+			} else if ( small_disk_rod == rod_B &amp;&amp; small_disk_last_rod == rod_C ) {
+				small_disk_rod = rod_A;
+				small_disk_last_rod = rod_B;
+				rod_A.push(rod_B.pop());
+				System.out.println( &quot;  from B to A&quot; );
+			} else if ( small_disk_rod == rod_C &amp;&amp; small_disk_last_rod == rod_A ) {
+				small_disk_rod = rod_B;
+				small_disk_last_rod = rod_C;
+				rod_B.push(rod_C.pop());
+				System.out.println( &quot;  from C to B&quot; );
+			} else if ( small_disk_rod == rod_C &amp;&amp; small_disk_last_rod == rod_B ) {
+				small_disk_rod = rod_A;
+				small_disk_last_rod = rod_C;
+				rod_A.push(rod_C.pop());
+				System.out.println( &quot;  from C to A&quot; );
+			}
+			small_disk_moved = true;
+		}
+	}
+}
+
+public static void main ( String argv[] ) {
+	int n;
+	System.out.print( &quot;Number of disks: &quot; );
+	n = Keyboard.readInt();
+	if ( n &gt; 0 ) {
+		System.out.println( &quot;Disk moves: &quot; );
+		solve( n );
+	} else {
+		System.out.println( &quot;Not a positive number&quot; );
+	}
+}</stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <sentBytes>true</sentBytes>
+            <url>true</url>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+            <connectTime>true</connectTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
