@@ -1,0 +1,30 @@
+==============================
+Rotate the string:
+0 AACTCA$T
+1 TAACTCA$
+2 $TAACTCA
+3 A$TAACTC
+4 CA$TAACT
+5 TCA$TAAC
+6 CTCA$TAA
+7 ACTCA$TA
+==============================
+Sorted the rows alphabetically:
+2 $TAACTCA
+3 A$TAACTC
+0 AACTCA$T
+7 ACTCA$TA
+4 CA$TAACT
+6 CTCA$TAA
+1 TAACTCA$
+5 TCA$TAAC
+==============================
+Extract the characters of the last columns only:
+T
+$
+A
+C
+T
+C
+A
+A
