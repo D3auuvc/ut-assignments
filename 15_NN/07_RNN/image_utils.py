@@ -1,10 +1,14 @@
 from __future__ import print_function
+
+import io
+import urllib.error
+import urllib.parse
+import urllib.request
 from builtins import range
-import urllib.request, urllib.error, urllib.parse, io
 
 import numpy as np
-from skimage.transform import resize as imresize
 from skimage import io
+from skimage.transform import resize as imresize
 
 """
 Utility functions used for viewing and processing images.
@@ -12,6 +16,7 @@ Utility functions used for viewing and processing images.
 
 SQUEEZENET_MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32)
 SQUEEZENET_STD = np.array([0.229, 0.224, 0.225], dtype=np.float32)
+
 
 def preprocess_image(img):
     """Preprocess an image for squeezenet.

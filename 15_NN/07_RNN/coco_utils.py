@@ -1,9 +1,12 @@
+import json
+import os
 from builtins import range
-import os, json
-import numpy as np
+
 import h5py
+import numpy as np
 
 BASE_DIR = '../datasets/coco_captioning'
+
 
 def load_coco_data(base_dir=BASE_DIR,
                    max_train=None,
